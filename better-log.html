@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Better Javascript Log</title>
+  </head>
+  <body>
+
+  <script type="text/javascript">
+
+
+function log(x){
+  var name
+  for (var prop in window) {
+    if (x === window[prop]) {
+      name = prop;
+    }
+  }
+  console.log(name + ' | ' + x + ' | ' + typeof x);
+}
+
+
+
+var test1 = 'hello world';
+var test2 = 123;
+var test3 = '123';
+
+
+log(test1);
+log(test2);
+log(test3);
+
+// Output:
+// Variables: foo=123, bar=abc, baz=true
+
+
+    </script>
+
+  </body>
+</html>
+
+
+
+
